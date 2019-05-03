@@ -827,4 +827,7 @@ public class Settings extends SettingsActivity {
     }
 
     public static class ScreenRefreshRateActivity extends SettingsActivity {}
+
+    // LiveDisplay
+    public static class LiveDisplaySettingsActivity extends SettingsActivity { /* empty */ }
 }
