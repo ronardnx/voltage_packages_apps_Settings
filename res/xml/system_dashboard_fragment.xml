@@ -67,6 +67,14 @@
         android:order="-380">
 
         <Preference
+            android:key="default_usb_configuration"
+            android:fragment="com.android.settings.connecteddevice.usb.UsbDefaultFragment"
+            android:icon="@drawable/ic_usb_24"
+            android:order="-245"
+            android:title="@string/usb_default_config_title"
+            android:summary="@string/usb_default_config_summary"/>
+
+        <Preference
             android:key="Keyboard_settings"
             android:title="@string/keyboard_settings"
             android:icon="@drawable/ic_settings_keyboards"
