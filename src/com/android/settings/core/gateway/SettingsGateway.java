@@ -224,6 +224,8 @@ import com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiSetting
 import com.android.settings.wifi.tether.WifiTetherSettings;
 import com.voltage.settings.display.refreshrate.ScreenRefreshRateFragment;
 
+import com.power.hub.powerhub;
+
 public class SettingsGateway {
 
     /**
@@ -437,6 +439,7 @@ public class SettingsGateway {
             SafetyCenterFragment.class.getName(),
             SafetyCenterQsFragment.class.getName(),
             ScreenRefreshRateFragment.class.getName(),
+            powerhub.class.getName()
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -485,5 +488,6 @@ public class SettingsGateway {
             Settings.NavigationModeSettingsActivity.class.getName(),
             Settings.ShadeSettingsActivity.class.getName(),
             Settings.ScreenRefreshRateActivity.class.getName(),
+            Settings.powerhubActivity.class.getName(),
     };
 }
