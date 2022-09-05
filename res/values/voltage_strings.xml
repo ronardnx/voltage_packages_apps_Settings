@@ -528,4 +528,9 @@ When the screen is off, the torch can be enabled with one of the following key c
     <string name="display_icon_title">Icons</string>
     <string name="display_icon_summary">Display icons along with level &amp; temperature</string>
 
+    <!-- Per-app volume control -->
+    <string name="app_volume">App volume</string>
+    <string name="app_volume_title">Per-app volume control</string>
+    <string name="app_volume_summary">Allow to set different volume levels for each app</string>
+
 </resources>
