@@ -42,6 +42,7 @@ import com.android.settings.homepage.TopLevelSettings;
 import com.android.settings.network.NetworkDashboardFragment;
 import com.android.settings.notification.ConfigureNotificationSettings;
 import com.android.settings.notification.SoundSettings;
+import com.android.settings.other.OtherFragment;
 import com.android.settings.privacy.PrivacyDashboardFragment;
 import com.android.settings.safetycenter.ExploitProtectionFragment;
 import com.android.settings.safetycenter.MoreSecurityPrivacyFragment;
@@ -163,6 +164,8 @@ public class DashboardFragmentRegistry {
                 CategoryKey.CATEGORY_SC_SYSTEM_AND_UPDATES);
         PARENT_TO_CATEGORY_KEY_MAP.put(powerhub.class.getName(),
                 CategoryKey.CATEGORY_SYSTEM_DEVELOPMENT);
+        PARENT_TO_CATEGORY_KEY_MAP.put(OtherFragment.class.getName(),
+                CategoryKey.CATEGORY_OTHER);
 
         CATEGORY_KEY_TO_PARENT_MAP = new ArrayMap<>(PARENT_TO_CATEGORY_KEY_MAP.size());
 
