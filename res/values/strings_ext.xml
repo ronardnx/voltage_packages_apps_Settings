@@ -195,4 +195,13 @@ This method can be particularly useful when GNSS is unavailable or unreliable, s
     <string name="cert_transparency_dl_footer">"Certificate Transparency (CT) is an Internet standard designed to enhance the security of digital certificates. It requires Certificate Authorities (CAs) to submit all issued certificates to a public log that records them, increasing transparency and accountability in the certificate issuance process.
 
 By maintaining a verifiable record of all certificates, CT makes it significantly harder for malicious actors to forge certificates or for CAs to mistakenly issue them. This helps protect apps from man-in-the-middle attacks and other security threats."</string>
+
+    <string name="pref_gnss_supl_title">Secure User Plane Location (SUPL)</string>
+    <string name="pref_gnss_supl_footer">A-GNSS (assisted satellite geolocation) based on nearby cell towers.</string>
+
+    <string name="supl_enabled_grapheneos_proxy">GrapheneOS proxy</string>
+    <string name="supl_enabled_standard_server">Standard server</string>
+    <string name="supl_disabled">Off</string>
+    <string name="supl_disabled_summary">Will make acquiring location lock significantly slower, especially if PSDS is turned off too</string>
+
 </resources>
