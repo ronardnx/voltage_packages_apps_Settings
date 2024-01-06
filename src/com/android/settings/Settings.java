@@ -823,4 +823,6 @@ public class Settings extends SettingsActivity {
             }
         }
     }
+
+    public static class ScreenRefreshRateActivity extends SettingsActivity {}
 }
