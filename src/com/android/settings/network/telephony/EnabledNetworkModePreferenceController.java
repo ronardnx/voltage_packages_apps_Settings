@@ -426,9 +426,12 @@ public class EnabledNetworkModePreferenceController extends
                         CarrierConfigManager.KEY_CARRIER_NR_AVAILABILITIES_INT_ARRAY);
                 long allowedNetworkTypes =  mTelephonyManager.getAllowedNetworkTypesForReason(
                         TelephonyManager.ALLOWED_NETWORK_TYPES_REASON_USER);
+                boolean supportsVONR = mContext.getResources().getBoolean(
+                        R.bool.config_supportsVONR);
                 isNrSaAvailable = supported5gOptions != null
                         && com.google.common.primitives.Ints.contains(supported5gOptions,
                             CarrierConfigManager.CARRIER_NR_AVAILABILITY_SA)
+                        && supportsVONR
                         && (allowedNetworkTypes & TelephonyManager.NETWORK_TYPE_BITMASK_NR) != 0;
             }
         }

@@ -18,4 +18,8 @@
 
     <!-- Whether to show the GPG UID (name/email) or just the key fingerprint -->
     <bool name="config_show_gpg_uid">false</bool>
+
+    <!-- 5g only toggle -->
+    <bool name="config_supportsVONR">true</bool>
+
 </resources>
