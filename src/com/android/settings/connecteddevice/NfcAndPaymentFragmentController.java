@@ -41,7 +41,10 @@ public class NfcAndPaymentFragmentController extends BasePreferenceController
     private final NfcAdapter mNfcAdapter;
     private final PackageManager mPackageManager;
     private final UserManager mUserManager;
+    private final IntentFilter mIntentFilter;
     private Preference mPreference;
+
+    private boolean mIsReceiverRegistered = false;
 
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
         @Override
@@ -63,6 +66,10 @@ public class NfcAndPaymentFragmentController extends BasePreferenceController
         mPackageManager = context.getPackageManager();
         mUserManager = context.getSystemService(UserManager.class);
         mNfcAdapter = NfcAdapter.getDefaultAdapter(context);
+
+        mIntentFilter = isNfcAvailable()
+                ? new IntentFilter(NfcAdapter.ACTION_ADAPTER_STATE_CHANGED) : null;
+
     }
 
     @Override
@@ -95,21 +102,18 @@ public class NfcAndPaymentFragmentController extends BasePreferenceController
 
     @Override
     public void onStop(LifecycleOwner owner) {
-        if (!isNfcAvailable()) {
-            return;
+        if (mIsReceiverRegistered) {
+            mContext.unregisterReceiver(mReceiver);
+            mIsReceiverRegistered = false;
         }
-
-        mContext.unregisterReceiver(mReceiver);
     }
 
     @Override
     public void onStart(LifecycleOwner owner) {
-        if (!isNfcAvailable()) {
-            return;
+        if (isNfcAvailable() && !mIsReceiverRegistered) {
+            mContext.registerReceiver(mReceiver, mIntentFilter);
+            mIsReceiverRegistered = true;
         }
-
-        mContext.registerReceiver(mReceiver,
-                new IntentFilter(NfcAdapter.ACTION_ADAPTER_STATE_CHANGED));
     }
 
     private boolean isNfcAvailable() {
