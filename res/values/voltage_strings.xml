@@ -668,4 +668,8 @@ When the screen is off, the torch can be enabled with one of the following key c
         <item>300000</item>
     </string-array>
 
+    <!-- Force LTE_CA -->
+    <string name="force_lte_ca_title">Carrier aggregation</string>
+    <string name="force_lte_ca_summary">Enhances LTE bandwidth by aggregating supported bands</string>
+
 </resources>
