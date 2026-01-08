@@ -690,4 +690,8 @@ When the screen is off, the torch can be enabled with one of the following key c
     <string name="gesture_navbar_auto_hide_title">Auto-hide navigation hint</string>
     <string name="gesture_navbar_auto_hide_summary">Automatically hide the navigation hint after a short period of inactivity</string>
 
+    <!-- Multi Audio Focus -->
+    <string name="multi_audio_focus_title">Multi audio focus</string>
+    <string name="multi_audio_focus_summary">Allow multiple apps to play audio simultaneously</string>
+
 </resources>
