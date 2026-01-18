@@ -308,6 +308,7 @@ public class EnabledNetworkModePreferenceController extends
         private boolean mDisplay3gOptions;
         private boolean mDisplay4gOptions;
         private boolean mDisplay5gOptions;
+        private boolean mSupportsVONR;
         private boolean isNrSaAvailable; // Nr-Sa (5G standalone)
         private int mSelectedEntry;
         private int mSubId;
@@ -426,12 +427,12 @@ public class EnabledNetworkModePreferenceController extends
                         CarrierConfigManager.KEY_CARRIER_NR_AVAILABILITIES_INT_ARRAY);
                 long allowedNetworkTypes =  mTelephonyManager.getAllowedNetworkTypesForReason(
                         TelephonyManager.ALLOWED_NETWORK_TYPES_REASON_USER);
-                boolean supportsVONR = mContext.getResources().getBoolean(
+                mSupportsVONR = mContext.getResources().getBoolean(
                         R.bool.config_supportsVONR);
                 isNrSaAvailable = supported5gOptions != null
                         && com.google.common.primitives.Ints.contains(supported5gOptions,
                             CarrierConfigManager.CARRIER_NR_AVAILABILITY_SA)
-                        && supportsVONR
+                        && mSupportsVONR
                         && (allowedNetworkTypes & TelephonyManager.NETWORK_TYPE_BITMASK_NR) != 0;
             }
         }
@@ -611,7 +612,7 @@ public class EnabledNetworkModePreferenceController extends
                 }
             });
 
-            if (!lteOnlyUnsupported && is5GSupported.get()) {
+            if (!lteOnlyUnsupported && is5GSupported.get() && mSupportsVONR) {
                 addNrOrLteOnlyEntry();
                 if (isNrSaAvailable) {
                     addNrOnlyEntry();
