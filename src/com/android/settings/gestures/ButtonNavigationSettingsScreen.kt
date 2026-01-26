@@ -73,6 +73,12 @@ class ButtonNavigationSettingsScreen : PreferenceScreenMixin {
                     ButtonNavigationSettingsOrderStore(context)
                 )
             }
+
+            +ButtonNavigationSettingsLayoutPreference(context)
+
+            if (context.resources.configuration.smallestScreenWidthDp >= 600) {
+                +ButtonNavigationSettingsTaskbarPreference(context)
+            }
         }
 
     companion object {

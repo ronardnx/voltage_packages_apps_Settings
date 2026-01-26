@@ -374,6 +374,7 @@ When the screen is off, the torch can be enabled with one of the following key c
     <!-- Navigation bar taskbar -->
     <string name="navigation_bar_enable_taskbar_title">Taskbar</string>
     <string name="navigation_bar_enable_taskbar_summary">Show taskbar with selected navigation mode</string>
+    <string name="button_taskbar_purpose" translatable="false">Whether taskbar enabled with selected navigation mode</string>
 
      <!-- navbar layout -->
      <string name="navbar_layout_title">Layout</string>
@@ -382,5 +383,6 @@ When the screen is off, the torch can be enabled with one of the following key c
      <string name="navbar_layout_expanded">Expanded</string>
      <string name="navbar_layout_leftleaning">Left-leaning</string>
      <string name="navbar_layout_rightleaning">Right-leaning</string>
+     <string name="button_nav_purpose" translatable="false">Whether navbar layout enabled with selected navigation mode</string>
 
 </resources>
