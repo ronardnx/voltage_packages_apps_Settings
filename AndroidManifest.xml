@@ -157,6 +157,12 @@
     <!-- LiveDisplay -->
     <uses-permission android:name="lineageos.permission.MANAGE_LIVEDISPLAY" />
 
+    <!-- nirvana mode -->
+    <uses-permission android:name="android.permission.SUSPEND_APPS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
     <application
             android:name=".SettingsApplication"
             android:label="@string/settings_label"
@@ -6468,6 +6474,23 @@
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.power.hub.fragments.SmartPixels" />
         </activity>
+
+        <!-- nirvana mode -->
+        <receiver android:name="com.power.hub.fragments.NirvanaModeReceiver"
+            android:exported="true"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="com.power.hub.action.UPDATE_NIRVANA_SCHEDULE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGES_UNSUSPENDED" />
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
 
     </application>
 </manifest>
