@@ -99,6 +99,7 @@ open class SoundScreen : PreferenceScreenMixin, PreferenceIconProvider {
                     +DialPadTonePreference() order -50
                     +ScreenLockSoundPreference() order -45
                     +ChargingSoundPreference() order -40
+                    +ChargingVibroPreference() order -39
                     +DockingSoundPreference() order -35
                     +TouchSoundPreference(context) order -30
                 }

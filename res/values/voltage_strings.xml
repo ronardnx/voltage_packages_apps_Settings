@@ -533,4 +533,9 @@ When the screen is off, the torch can be enabled with one of the following key c
     <string name="app_volume_title">Per-app volume control</string>
     <string name="app_volume_summary">Allow to set different volume levels for each app</string>
 
+    <!-- Charging vibration -->
+    <string name="charging_sounds_custom_title">Charging sound</string>
+    <string name="charging_vibro_title">Charging vibration</string>
+    <string name="charging_vibro_purpose">Vibrate when the device starts or stops charging</string>
+
 </resources>
