@@ -78,6 +78,12 @@ public class SettingsApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
+        if (getUserId() == android.os.UserHandle.USER_SYSTEM) {
+            com.android.settingslib.utils.ThreadUtils.postOnBackgroundThread(() -> {
+                com.android.settings.users.UserRestrictions.fixupPrivateSpaceRestrictions(this);
+            });
+        }
+
         if (Flags.catalyst()) {
             CatalystFlagProviderFactory.INSTANCE.setProvider(
                     new CatalystFlagProvider() {
