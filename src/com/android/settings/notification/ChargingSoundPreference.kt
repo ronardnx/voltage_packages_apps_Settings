@@ -34,7 +34,7 @@ class ChargingSoundPreference :
     SwitchPreference(
         KEY,
         purpose = R.string.charging_sounds_enabled_purpose,
-        R.string.charging_sounds_title
+        R.string.charging_sounds_custom_title
     ),
     PreferenceActionMetricsProvider,
     PreferenceAvailabilityProvider {
