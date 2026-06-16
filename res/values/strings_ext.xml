@@ -213,4 +213,6 @@ No query or data is sent to the server. These files contain orbits and statuses 
     <string name="psds_disabled">Off</string>
     <string name="psds_disabled_summary">Will make acquiring location lock significantly slower, especially if SUPL is turned off too</string>
 
+    <string name="exploit_protection_title">Exploit protection</string>
+    <string name="exploit_protection_summary">Device and app security improvements</string>
 </resources>
