@@ -48,6 +48,8 @@ class DarkModeBlackThemePreference(
     override val key: String
         get() = BLACK_THEME_KEY
 
+    override val purpose: Int = R.string.berry_black_theme_purpose
+
     override val title: Int
         get() = R.string.berry_black_theme_title
 
@@ -65,6 +67,8 @@ class DarkModeBlackThemePreference(
 
     override fun getWritePermit(context: Context, callingPid: Int, callingUid: Int) =
         ReadWritePermit.ALLOW
+
+    override val supportsWrite = true
 
     override fun isEnabled(context: Context): Boolean {
         return darkModeStorage.getBoolean(DarkModeMainSwitchPreference.KEY) ?: false
