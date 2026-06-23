@@ -9,4 +9,24 @@
     <string name="backup_transport_setting_label">Change backup provider</string>
     <string name="backup_transport_title">Select backup provider</string>
 
+    <!-- VoltageOS maintainer -->
+    <string name="voltage_maintainer_title">Build status</string>
+    <string name="maintainer">Maintainer</string>
+    <string name="voltage_maintainer">Unofficial Maintainer</string>
+
+    <!-- VoltageOS device -->
+    <string name="about_device_name">Device</string>
+
+    <!-- VoltageOS version -->
+    <string name="voltage_version">VoltageOS version</string>
+    <string name="voltage_version_default">Unknown</string>
+
+    <!-- Build date -->
+    <string name="build_date">Build date</string>
+
+    <!-- SELinux status -->
+    <string name="selinux_status">SELinux status</string>
+    <string name="selinux_status_disabled">Disabled</string>
+    <string name="selinux_status_permissive">Permissive</string>
+    <string name="selinux_status_enforcing">Enforcing</string>
 </resources>

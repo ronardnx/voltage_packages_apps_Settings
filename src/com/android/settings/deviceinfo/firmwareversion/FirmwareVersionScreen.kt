@@ -24,6 +24,8 @@ import com.android.settings.R
 import com.android.settings.Settings.FirmwareVersionActivity
 import com.android.settings.contract.TAG_DEVICE_STATE_SCREEN
 import com.android.settings.core.PreferenceScreenMixin
+import com.android.settings.deviceinfo.voltage.VoltageLogoPreference
+import com.android.settings.deviceinfo.voltage.VoltageMaintainerPreference
 import com.android.settings.utils.makeLaunchIntent
 import com.android.settingslib.metadata.PreferenceMetadata
 import com.android.settingslib.metadata.PreferenceSummaryProvider
@@ -70,12 +72,16 @@ open class FirmwareVersionScreen : PreferenceScreenMixin, PreferenceSummaryProvi
 
     override fun getPreferenceHierarchy(context: Context, coroutineScope: CoroutineScope) =
         preferenceHierarchy(context) {
+            +VoltageLogoPreference()
             +FirmwareVersionDetailPreference()
+            +VoltageVersionPreference()
+            +AboutDeviceNamePreference()
+            +VoltageMaintainerPreference()
             +SecurityPatchLevelPreference()
-            +MainlineModuleVersionPreference()
             +BasebandVersionPreference()
-            +KernelVersionPreference()
-            +SimpleBuildNumberPreference()
+            +VoltageKernelVersionPreference()
+            +SelinuxStatusPreference()
+            +RomBuildDatePreference()
         }
 
     companion object {
