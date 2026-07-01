@@ -270,6 +270,8 @@ public class SoundSettings extends DashboardFragment implements OnActivityResult
                 new ChargingSoundPreferenceController(context, fragment, lifecycle);
         final ChargingVibroPreferenceController chargingVibroPreferenceController =
                 new ChargingVibroPreferenceController(context, fragment, lifecycle);
+        final ScreenshotSoundPreferenceController screenshotSoundPreferenceController =
+                new ScreenshotSoundPreferenceController(context, fragment, lifecycle);
         final DockingSoundPreferenceController dockingSoundPreferenceController =
                 new DockingSoundPreferenceController(context, fragment, lifecycle);
         final TouchSoundPreferenceController touchSoundPreferenceController =
@@ -287,6 +289,7 @@ public class SoundSettings extends DashboardFragment implements OnActivityResult
         controllers.add(screenLockSoundPreferenceController);
         controllers.add(chargingSoundPreferenceController);
         controllers.add(chargingVibroPreferenceController);
+        controllers.add(screenshotSoundPreferenceController);
         controllers.add(dockingSoundPreferenceController);
         controllers.add(touchSoundPreferenceController);
         controllers.add(vibrateIconPreferenceController);

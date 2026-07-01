@@ -132,6 +132,9 @@ const val KEY_CHARGING_SOUNDS = "charging_sounds"
 /** Contract key for the "Charging vibration" setting. */
 const val KEY_CHARGING_VIBRO = "charging_vibro"
 
+/** Contract key for the "Screenshot sound" setting. */
+const val KEY_SCREENSHOT_SOUND = "screenshot_sound"
+
 /** Contract key for the "Docking sounds" setting. */
 const val KEY_DOCKING_SOUNDS = "docking_sounds"
 
