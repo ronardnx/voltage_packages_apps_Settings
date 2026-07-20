@@ -21,6 +21,7 @@ import androidx.preference.Preference
 import com.android.settings.R
 import com.android.settingslib.metadata.PreferenceMetadata
 import com.android.settingslib.preference.PreferenceBinding
+import com.android.settingslib.widget.LayoutPreference
 
 class VoltageLogoPreference : PreferenceMetadata, PreferenceBinding {
 
@@ -34,7 +35,7 @@ class VoltageLogoPreference : PreferenceMetadata, PreferenceBinding {
         get() = false
 
     override fun createWidget(context: Context) =
-        Preference(context).apply { layoutResource = R.layout.voltage_logo_layout }
+        LayoutPreference(context, R.layout.voltage_logo_layout)
 
     override fun bind(preference: Preference, metadata: PreferenceMetadata) {
         super.bind(preference, metadata)
