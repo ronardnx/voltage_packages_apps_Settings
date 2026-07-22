@@ -103,7 +103,7 @@
             android:key="assistant_volume"
             android:icon="@*android:drawable/ic_volume_voice_chat"
             android:title="@string/assistant_volume_option_title"
-            android:order="-130"
+            android:order="-135"
             settings:userRestriction="no_adjust_volume"
             settings:controller="com.android.settings.notification.AssistantVolumePreferenceController"/>
 
@@ -111,7 +111,7 @@
         <com.voltage.support.preferences.SystemSettingSwitchPreference
             android:key="increasing_ring"
             android:title="@string/increasing_ring_volume_option_title"
-            android:order="-136"
+            android:order="-130"
             settings:userRestriction="no_adjust_volume"
             settings:controller="com.android.settings.notification.IncreasingRingPreferenceController" />
 
@@ -120,7 +120,7 @@
             android:key="increasing_ring_volume"
             android:icon="@drawable/ring_notif_increasing"
             android:dependency="increasing_ring"
-            android:order="-135"
+            android:order="-125"
             settings:userRestriction="no_adjust_volume"
             settings:controller="com.android.settings.notification.IncreasingRingVolumePreferenceController" />
     </com.android.settingslib.widget.UntitledPreferenceCategory>
